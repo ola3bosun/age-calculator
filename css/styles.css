@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+body{
+  background-color: hsl(0, 0%, 86%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.card{
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.5rem 2.5rem;
+    border-radius: 1rem;
+    border-bottom-right-radius: 10rem;
+    position: relative;
+    width: 45vw;
+}
+.input-fields{
+    display: flex;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+.input-fields input[type="number"]{
+    padding: .5rem;
+    width: 7rem;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4px;
+    color: hsl(0, 0%, 8%);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+hr{
+    border: 1px solid  hsl(0, 0%, 86%);
+}
+.input-fields input[type="number"]::placeholder{
+    color:  hsl(0, 1%, 44%);
+    font-weight: 500;
+}
+.input-fields input[type="number"]:active{
+    border: 1px solid hsl(259, 100%, 65%);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.unit p{
+    font-size: 70%;
+    padding-bottom: .5rem;
+    color:  hsl(0, 1%, 44%);
+    font-weight: 700;
+}
+#error,#errorMonth,#errorYear{
+    color:  hsl(0, 100%, 67%);
+    font-style: italic;
+    font-size: 12px;
+    padding: .3rem 0;
+    visibility: hidden;
+}
+.btn{
+    position: relative;
+}
+button{
+    background-color:  hsl(259, 100%, 65%);
+    padding: .5rem;
+    border-radius: 50%;
+    border: 2px solid  hsl(259, 100%, 65%);
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    top: -2.2rem;
+}
+.output{
+    /* width: 4.5rem; */
+    border: none;
+    font-size: 4rem;
+    color: hsl(259, 100%, 65%);
+    font-weight: 800;
+    font-style: italic;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.calculating{
+    transition: transform .5s ease;
+    transform: rotateY(360deg);
+}
+.when{
+    font-size: 4rem;
+    color:  hsl(0, 0%, 8%);
+    font-weight: 800;
+    font-style: italic;
+    padding-bottom: 1rem;
+}
+
+/* MOBILE VIEWS */
+@media screen and (max-width: 1024px){
+    .card{
+        width: 70vw;
+    }
+    body{
+        padding: 0 .5rem;
+    }
+    .btn{
+        right: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .card{
+        width: 70vw;
+    }
+    body{
+        padding: 0 .5rem;
+    }
+    .btn{
+        right: 0;
+    }
+}
+@media screen and (max-width: 600px){
+    .card{
+        width: 90vw;
+    }
+    .btn{
+        right: 45%;
+    }
+    .btn button{
+       width: 2rem;
+       height: 2rem;
+       top: -1rem;
+       padding: 5px;
+    }
+    .btn button img{
+        height: 100%;
+        width: 100%;
+    }
+    .unit input[type="number"]{
+        width: 5rem;
+        font-size: 1.3rem;
+    }
+    .output{
+        font-size: 3.5rem;
+    }
+    .when{
+        font-size: 3rem;
+    }
+    .input-fields{
+        padding: .5rem 0;
+    }
+
+    .output,.when{
+        font-size: ;
+    }
+    .attribution { font-size: 8px; text-align: left; }
+}
+@media screen and (max-width: 350px){
+    .unit input[type="number"]{
+        width: 4rem;
+        padding: .5rem;
+    }
+    .unit input[type="number"]::placeholder{
+        font-size: 1rem;
+    }
+    .input-fields{
+        gap: .5rem;
+    }
+    .output-fields, .when{
+        font-size: 2rem;
+    }
+}

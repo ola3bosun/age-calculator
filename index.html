@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="card">
+      <div class="container">
+       <div class="top">
+        <div class="input-fields">
+            <div class="unit">
+                <p>DAY</p>
+                <input type="number" name="day" id="day" placeholder="DD" minlength=”1″ maxlength=”2″ required>
+                <div id="error">Must be a valid date</div>
+            </div>
+            <div class="unit">
+                <p>MONTH</p>
+                <input type="number" name="day" id="month" placeholder="MM" minlength=”1″ maxlength=”2″ required>
+                <div id="errorMonth">Must be a valid Month</div>
+            </div>
+            <div class="unit">
+                <p>YEAR</p>
+                <input type="number" name="day" id="year" placeholder="YYYY" minlength=”4″ maxlength=”4″ required>
+                <div id="errorYear">Must be In The Past</div>
+            </div>
+        </div>
+       
+       </div>
+        
+        <hr>
+        <div class="btn">
+            <button onclick="ageCalculator();">
+                <img src="images/icon-arrow.svg" alt="" height="100%">
+            </button>
+        </div>
+        <div class="output-fields">
+            <div class="output">
+                <div id="ageYear">--</div><div class="when">years</div>
+            </div>
+            <div class="output">
+                <div id="ageMonth">--</div> <div class="when">months</div>
+            </div>
+            <div class="output">
+                <div id="ageDay">--</div><div class="when">days</div>
+            </div>
+        </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">ola2bosun</a>.
+          </div>
+       
+      </div>
+    </div>
+   
+    <script src="js/index.js"></script>
+</body>
+</html>
