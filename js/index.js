@@ -10,6 +10,8 @@ var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; // Number of d
 
 // AGE CALCULATOR FUNCTION
 function ageCalculator() {
+
+    resetErrorMessages();
     var birthDay = parseInt(day.value);
     var birthMonth = parseInt(month.value);
     var birthYear = parseInt(year.value);
@@ -88,3 +90,15 @@ function errorMessageAll() {
    errorMessageMonth();
    errorMessageYear();
 }
+
+ function resetErrorMessages(){
+    document.getElementById("day").style.borderColor = "hsl(0, 0%, 86%)";
+    document.getElementById("error").style.visibility = "hidden";
+    document.querySelectorAll(".unit p")[0].style.color = "hsl(0, 1%, 44%)";
+    document.getElementById("month").style.borderColor = "hsl(0, 0%, 86%)";
+    document.getElementById("errorMonth").style.visibility = "hidden";
+    document.querySelectorAll(".unit p")[1].style.color = "hsl(0, 1%, 44%)";
+    document.getElementById("year").style.borderColor = "hsl(0, 0%, 86%)";
+    document.getElementById("errorYear").style.visibility = "hidden";
+    document.querySelectorAll(".unit p")[2].style.color = "hsl(0, 1%, 44%)";
+ }
